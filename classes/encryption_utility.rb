@@ -1,6 +1,3 @@
-require_relative "../modules/encryption_sha"
-require "colorize"
-
 class EncryptionUtility
   extend EncryptionSHA
 

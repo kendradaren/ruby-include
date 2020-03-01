@@ -1,6 +1,3 @@
-require "digest"
-require "colorize"
-
 module EncryptionMD5
   def self.included(base)
     puts "#{base} included #{self}".yellow

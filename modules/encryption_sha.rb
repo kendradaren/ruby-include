@@ -1,6 +1,3 @@
-require "digest"
-require "colorize"
-
 module EncryptionSHA
   def self.included(base)
     puts "#{base} included #{self}".yellow

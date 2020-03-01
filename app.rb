@@ -1,8 +1,8 @@
-require_relative "classes/person"
-require_relative "classes/user"
-require_relative "classes/encryption_utility"
-require_relative "modules/encryption_md5"
 require "colorize"
+require "digest"
+
+# require all files in modules and classes
+Dir.glob(File.join(".", "{modules,classes}", "**", "*.rb"), &method(:require))
 
 p Person.instance_count
 
