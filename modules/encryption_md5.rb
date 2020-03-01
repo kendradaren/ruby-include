@@ -1,11 +1,11 @@
 module EncryptionMD5
-  def self.included(base)
-    puts "#{base} included #{self}".yellow
-  end
+  # def self.included(base)
+  #   puts "#{base} included #{self}".yellow
+  # end
 
-  def self.extended(base)
-    puts "#{base} extended #{self}".green
-  end
+  # def self.extended(base)
+  #   puts "#{base} extended #{self}".green
+  # end
 
   def encrypt(string)
     Digest::MD5.hexdigest(string)

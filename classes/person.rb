@@ -1,12 +1,8 @@
 class Person
   @@number_of_instances = 0
 
-  def method_missing(sym, *args)
-    puts ">>>>>>>>>>>> #{sym} not defined on #{self}".red
-  end
-
   def self.instance_count
-    "Instances: " + @@number_of_instances.to_s
+    @@number_of_instances
   end
 
   def initialize(name)

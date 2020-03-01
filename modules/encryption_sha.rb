@@ -1,11 +1,11 @@
 module EncryptionSHA
-  def self.included(base)
-    puts "#{base} included #{self}".yellow
-  end
+  # def self.included(base)
+  #   puts "#{base} included #{self}".yellow
+  # end
 
-  def self.extended(base)
-    puts "#{base} extended #{self}".green
-  end
+  # def self.extended(base)
+  #   puts "#{base} extended #{self}".green
+  # end
 
   def encrypt(string)
     Digest::SHA2.hexdigest(string)
