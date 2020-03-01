@@ -9,10 +9,6 @@ class Person
     @number_of_instances
   end
 
-  def self.instance_count
-    @number_of_instances
-  end
-
   def initialize(name)
     @name = name
     self.class.number_of_instances += 1

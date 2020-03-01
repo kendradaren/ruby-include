@@ -4,22 +4,22 @@ require "digest"
 # require all files in modules and classes
 Dir.glob(File.join(".", "{modules,classes}", "**", "*.rb"), &method(:require))
 
-puts "Test instance_count".light_magenta
-p Person.instance_count
+puts "Test number_of_instances".light_magenta
+p Person.number_of_instances
 
 person = Person.new("Anja")
-puts "Test instance_count".light_magenta
-p Person.instance_count
+puts "Test number_of_instances".light_magenta
+p Person.number_of_instances
 friend = Person.new("Carla")
-puts "Test instance_count".light_magenta
-p Person.instance_count
-puts "Test instance_count".light_magenta
-p friend.class.instance_count
+puts "Test number_of_instances".light_magenta
+p Person.number_of_instances
+puts "Test number_of_instances".light_magenta
+p friend.class.number_of_instances
 
 puts "Test create user".light_blue
 user = User.new("Ada")
-puts "Test instance_count".light_magenta
-p User.instance_count
+puts "Test number_of_instances".light_magenta
+p User.number_of_instances
 user.password = "super secret"
 p user
 p user.name
@@ -29,8 +29,8 @@ p user.encrypted_password
 
 puts "user.encrypt_password".light_blue
 p user.encrypt_password
-puts "Test instance_count".light_magenta
-p user.class.instance_count
+puts "Test number_of_instances".light_magenta
+p user.class.number_of_instances
 
 puts "A user instance can access encrypt as it is 'included'".light_blue
 p user.encrypt("Hello Kendra")

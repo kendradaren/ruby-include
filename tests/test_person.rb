@@ -17,11 +17,11 @@ class TestPerson < Test::Unit::TestCase
     assert_equal(expectedName, p.name)
   end
 
-  def test_instance_count
+  def test_number_of_instances
     p1 = Person.new("TestPerson1")
-    firstCount = Person.instance_count
+    firstCount = Person.number_of_instances
     p2 = Person.new("TestPerson2")
-    secondCount = Person.instance_count
+    secondCount = Person.number_of_instances
     assert(secondCount == firstCount + 1)
   end
 
