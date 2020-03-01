@@ -15,4 +15,8 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
-      - run: ruby tests.rb
+      - run: |
+          sudo apt-get -yqq install libpq-dev
+          gem install bundler
+          bundle install
+          ruby tests.rb
